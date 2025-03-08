@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Manu</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="menu.html">Manu</a></li>
+            <li><a href="special_menu.html">This Week Special</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Manu</h2>
+            <div class="menu-gallery" id="menu-gallery"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuGallery = document.getElementById("menu-gallery");
+            for (let i = 1; i <= 8; i++) {
+                let img = document.createElement("img");
+                img.src = `manu_pic/${i}.png`;
+                img.alt = `菜單${i}`;
+                menuGallery.appendChild(img);
+            }
+        });
+    </script>
+</body>
+</html>
